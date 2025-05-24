@@ -1,0 +1,6 @@
+Objects are physical entity.
+Classes can be logical as well as physical.
+
+a collection or group of similar objects makes a class.
+
+objects are objects until they got memory, once they get the memory we will call them instacnes of their respected class.
