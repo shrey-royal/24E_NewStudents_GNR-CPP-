@@ -24,6 +24,14 @@ public:
         cout << "Parameterized constructor called!" << endl;
     }
 
+    //Copy Constructor
+    Employee(const Employee& emp) {
+        this->id = emp.id;
+        this->name = emp.name;
+        this->salary = emp.salary;
+        cout << "Copy constructor called!" << endl;
+    }
+
     void getEmployeeDetails() {
         cout << "Id: " << id << "\nName: " << name << "\nSalary: " << salary << endl;
     }
@@ -34,9 +42,13 @@ int main() {
     Employee e; //default constructor will be called
     Employee e1(101, "Jayveer", 340000);    //parameterized constructor will be called
 
+    Employee e2(e1);    // Copy constructor called
+
     e.getEmployeeDetails();
     cout << endl;
     e1.getEmployeeDetails();
+    cout << endl;
+    e2.getEmployeeDetails();
 
     return 0;
 }
