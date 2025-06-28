@@ -23,7 +23,9 @@ int main() {
         cout << "Enter data: ";
         getline(cin, line);
         while(line != "~") {
-            fout << line << endl;
+            // fout << line << endl;
+            fout.write(line.c_str(), line.size());
+            fout << endl;
             getline(cin, line);
         }
         cout << "Data written into " << fileName << " successfully!" << endl;
